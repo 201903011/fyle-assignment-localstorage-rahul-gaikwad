@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+/* base */
+@import 'theme/01-base/document.css';
+@import 'theme/tailwindcss/base.css';
+@import 'theme/01-base/variables.css';
+@import 'theme/01-base/document.css';
+@import 'theme/01-base/font.css';
+@import 'theme/01-base/heading.css';
+
+/* components */
+@import 'theme/tailwindcss/components.css';
+@import 'theme/02-components/link.css';
+@import 'theme/02-components/button.css';
+
+/* utilities */
+@import 'theme/tailwindcss/utilities.css';
+@import 'theme/03-utilities/border.css';
