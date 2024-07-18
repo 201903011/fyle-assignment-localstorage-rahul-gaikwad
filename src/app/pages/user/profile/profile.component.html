@@ -1,5 +1,25 @@
 <section>
-  <p>User: {{ userId }}</p>
-  <p>User: {{ user?.name }}</p>
-  <p>User: {{ getConcatenatedWorkOuts(user!.workouts) }}</p>
+  <table class="text-xs my-3">
+    <tbody>
+      <tr>
+        <td class="px-2 pr-16 text-gray-500"><h4>Name</h4></td>
+        <td class="px-2">
+          <h4>{{ user?.name }}</h4>
+        </td>
+      </tr>
+      <tr>
+        <td class="px-2 pr-16 text-gray-500"><h4>WorkOuts</h4></td>
+        <td class="px-2">
+          <h4>{{ getConcatenatedWorkOuts(user?.workouts ?? []) }}</h4>
+        </td>
+      </tr>
+      <tr>
+        <td class="px-2 pr-16 text-gray-500"><h4>Total Time</h4></td>
+        <td class="px-2">
+          <h4>{{ getTotalWorkOut(user?.workouts ?? []) }}</h4>
+        </td>
+      </tr>
+    </tbody>
+    <h2 class="pt-2 text-gray-500">Graph</h2>
+  </table>
 </section>

@@ -15,6 +15,7 @@ export default {
     "./src/**/*.{html,ts}",
     "./projects/**/*.{html,ts}",
     "node_modules/preline/dist/*.js",
+    "./node_modules/flowbite/**/*.js",
   ],
   darkMode: "class",
   theme: {
@@ -28,5 +29,12 @@ export default {
     },
     extend: {},
   },
-  plugins: [...TAILWIND_PLUGINS, ...CUSTOM_PLUGINS, require("preline/plugin")],
+  plugins: [
+    ...TAILWIND_PLUGINS,
+    ...CUSTOM_PLUGINS,
+    require("preline/plugin"),
+    require("flowbite/plugin")({
+      charts: true,
+    }),
+  ],
 };
